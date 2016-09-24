@@ -15,7 +15,7 @@ $('#btnBuscarA').click(function(){
 						'<td>'+item.nombreArea+'</td>'+
 						'<td>'+item.descripcion+'</td>'+
 						'<td>'+item.responsable+'</td>'+
-						'<td>'+' '+'</td>'+
+						'<td>'+''+'</td>'+
 						'</tr>'		
 					);
 			});

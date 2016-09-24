@@ -38,7 +38,7 @@
       <div class="modal-body">
         <!--Formulario de registro-->
   
-      
+      <form action="<?php echo base_url()?>careas/guardar" method="post">
         <div class="row">
           <div class="col-xs-7">
             <div class="form-group">
