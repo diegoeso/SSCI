@@ -26,6 +26,7 @@ class Careas extends CI_Controller
 		if ($res==1) 
 		{
 			echo "<script language='JavaScript'>alert('Registro existoso');</script>";
+			
 			$this->load->view('layout/vcabeceraA');
 			$this->load->view('administrador/vareas');
 			$this->load->view('layout/vpie');

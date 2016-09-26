@@ -12,7 +12,7 @@ class Cactividades extends CI_Controller
 	}
 	public function index(){
 		$this->load->view('layout/vcabeceraA');
-		$this->load->view('administrador/vactividades2');
+		$this->load->view('administrador/vactividades');
 		$this->load->view('layout/vpie');
 		//echo "<script language='JavaScript'>alert('Si quedo');</script>";
 	}
@@ -29,7 +29,7 @@ class Cactividades extends CI_Controller
 		{
 			echo "<script language='JavaScript'>alert('Registro exitoso');</script>";
 			$this->load->view('layout/vcabeceraA');
-			$this->load->view('administrador/vactividades2');
+			$this->load->view('administrador/vactividades');
 			$this->load->view('layout/vpie');
 		}else
 			echo "<script language='JavaScript'>alert('Error en el registro');</script>";
@@ -38,8 +38,13 @@ class Cactividades extends CI_Controller
 	{
 		echo json_encode($this->mactividades->leerActividades());
 	}
+
+	public function cagaDatos()
+	{
+
+	}
 }
- ?>
+?>
 
 	
 	

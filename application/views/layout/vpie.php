@@ -15,9 +15,7 @@
 	<?php if ($this->uri->segment(1)=='cactividades'): ?>
 		<script src=" <?php echo base_url()?>js/jactividades.js"></script>
 		<script src=" <?php echo base_url()?>js/jareaB.js"></script>
-		<script type="text/javascript">
-		var baseurl = "<?php echo base_url();?>";
-	</script>
+		
 	<?php endif ?>
 	<script type="text/javascript">
 		var baseurla = "<?php echo base_url();?>";

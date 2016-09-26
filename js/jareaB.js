@@ -1,13 +1,3 @@
-/*$(document).on("ready",inicio);
-$.post(baseurl+"careas/leeAreas",
-function(data){
-	var c=JSON.parse(data);
-	$.each(c,function(i,item){
-		$('#cboAreas').append('<option value="'+item.idArea+'">'+item.nombreArea+'</option>');
-	});
-
-});*/
-
 
 $.post(baseurl+"careas/leeAreas",
 		function(data){
@@ -16,5 +6,12 @@ $.post(baseurl+"careas/leeAreas",
 				$('#cboArea').append(
 						'<option value="'+item.idArea+'">'+item.nombreArea+'</option>'	
 					);
-			});
 		});
+});
+
+$('#cboArea').change(function(){
+	$('#cboArea option:selected'),each(function(){
+		var id = $('#cboArea').value();
+		alert(id);
+	});
+});
