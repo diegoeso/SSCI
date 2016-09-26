@@ -73,10 +73,12 @@
           </div>
           </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-default">Guardar</button>-->
+        <button type="submit" class="btn btn-default">Guardar</button>
             <!--<input type="submint" value="Guardar">-->
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
       </div>
     </form>
     </div>
+  </div>
+  </div>
   </div>

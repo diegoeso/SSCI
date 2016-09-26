@@ -19,10 +19,17 @@ class Mareas extends CI_Model
 		}
 	}
 	public function leerAreas(){
-		$this->db->select('nombreArea,descripcion,responsable');
+		$this->db->select('idArea,nombreArea,descripcion,responsable');
 		$this->db->from('area');
 		$re = $this->db->get();
 		return $re->result();
+	}
+	public function cargarAreas()
+	{
+		$this->db->select('idArea,nombreArea');
+		$this->db->from('area');
+		$ca=$this->db->get();
+		return $ca->result();
 	}
 }
 

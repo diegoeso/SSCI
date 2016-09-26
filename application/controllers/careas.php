@@ -43,5 +43,10 @@ class Careas extends CI_Controller
 		echo json_encode($this->mareas->leerAreas());
 	}
 
+	public function cargarAreas()
+	{
+		echo json_encode($this->mareas->cargarAreas());
+	}
+
 }
  ?>
