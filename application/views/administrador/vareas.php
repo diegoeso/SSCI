@@ -1,33 +1,35 @@
-<div class="container" style="margin-bottom:30px">
+<div class="row">
+  <div class="container text-center">
     <div class="row">
-      <div class="cols-xs-12 col-sm-6">
-          <h1 class="text-center" style="margin:20 solid:#009966 ">Areas</h1>
+        <div class="col-xs-6 col-md-4">
+          <h3 align="left">Áreas</h3>
         </div>
-        <div class="cols-xs-12 col-sm-4">
-          <div class="col-xs-13" align="right">
-                <label>Nombre:</label>
-                <input type="text" name="nombre">                                         
-                <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="" id="btnBuscarA"><span class="glyphicon glyphicon-search"></span></a>
-                <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Agregar <span class="glyphicon glyphicon-plus"></span></a>                 
-            </div>
+        <div class="col-xs-12 col-md-8" align="right">
+          <br>
+          <label>Nombre: </label>
+          <input type="text" name="txtBuscar" id="txtBuscar">
+           <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="" id="btnBuscarA"><span class="glyphicon glyphicon-search"></span></a>
+          <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Agregar <span class="glyphicon glyphicon-plus"></span></a>
         </div>
     </div>
-  </div>       
-    <div class="container">
-            <div class="row" >
-              <table class="table table-bordered" id="tablaDatos">
-                <thead>
-                  <tr>
-                    <td class="text-center">Nombre Area</td>
-                    <td class="text-center">Descripcion</td>
-                    <td class="text-center">Responsable</td>
-                    <td class="text-center">Opción</td>
-                  </tr>
-                </thead>              
-              </table>          
-            </div>
-          </div>
-
+    <br>
+    
+  </div>
+</div>     
+<div class="container">
+  <div class="row container" >
+    <table class="table table-bordered" id="tablaDatos">
+      <thead>
+        <tr>
+          <td class="text-center">Nombre Area</td>
+          <td class="text-center">Descripcion</td>
+          <td class="text-center">Responsable</td>
+          <td class="text-center">Opción</td>
+        </tr>
+      </thead>              
+    </table>          
+  </div>
+ </div>
   <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -71,12 +73,9 @@
             </div>
             <label id="error_nombre" class="errores_formulario">Error, escriba un nombre valido</label>
           </div>
-          </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-default">Guardar</button>
-            <!--<input type="submint" value="Guardar">-->
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
       </div>
+      <!--<?php //validation_errors();?>-->
     </form>
     </div>
   </div>

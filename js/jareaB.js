@@ -1,4 +1,3 @@
-
 $.post(baseurl+"careas/leeAreas",
 		function(data){
 			var r = JSON.parse(data);
@@ -14,4 +13,4 @@ $('#cboArea').change(function(){
 		var id = $('#cboArea').value();
 		alert(id);
 	});
-});
+});

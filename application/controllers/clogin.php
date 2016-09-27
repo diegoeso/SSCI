@@ -35,6 +35,7 @@ class Clogin extends CI_Controller
 		$usu=$this->input->post('txtuser');
 		$pass=$this->input->post('txtpass');
 		$res=$this->mlogin->login($usu,$pass);
+		
 		$val=$this->mlogin->validarU();
 		if ($res==true) 
 		{

@@ -13,24 +13,21 @@
   			</div>
 		</div>
 		<br>
-		<div class="container">
-				<div class="row container" >
-					<table class="table table-bordered" id="tablaDatos">
-						<tr>
-							<td class="text-center">Nombre</td>
-							<td class="text-center">Descripción</td>
-							<td class="text-center">Fecha Registro</td>
-							<td class="text-center">Fecha Inicio</td>
-							<td id="tel" class="text-center">Fecha Termino</td>
-							<td class="text-center">Área</td>
-							<td class="text-center">Opcion</td>
-						</tr>			
-					</table>					
-				</div>
-			</div>
-			<select name="cboAreas" id="cboAreas">
-				
-			</select>
+	</div>
+	<div class="container">
+		<div class="row container" >
+			<table class="table table-bordered" id="tablaDatos">
+				<tr>
+					<td class="text-center">Nombre</td>
+					<td class="text-center">Descripción</td>
+					<td class="text-center">Fecha Registro</td>
+					<td class="text-center">Fecha Inicio</td>
+					<td id="tel" class="text-center">Fecha Termino</td>
+					<td class="text-center">Área</td>
+					<td class="text-center">Opcion</td>
+				</tr>			
+			</table>					
+		</div>
 	</div>
 </div>
 <br>

@@ -46,7 +46,7 @@
         <li><a href="<?php echo base_url()?>cusuario">Prestadores</a></li>
         <li><a href="<?php echo base_url()?>careas">Áreas</a></li>
         <li><a href="<?php echo base_url()?>cactividades">Actividades</a></li>
-        <li><a href="">Asignaciones</a></li>
+        <li><a href="<?php echo base_url()?>casignaciones">Asignaciones</a></li>
         <li><a href="">Reportes</a></li>
         <!--<li><a href="index.html"></a></li>-->
       </ul>

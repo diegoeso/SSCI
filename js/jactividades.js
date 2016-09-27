@@ -20,7 +20,7 @@
 						'<td>'+item.fechaRegistro+'</td>'+
 						'<td>'+item.fechaInicio+'</td>'+
 						'<td>'+item.fechaTermino+'</td>'+
-						'<td>'+item.idArea+'</td>'+
+						'<td>'+item.nombreArea+'</td>'+
 						'</tr>'		
 					);
 			});
@@ -52,3 +52,15 @@ $('#txtBuscar').keyup(function(){
 					);
 		});
 });
+
+
+$.post(baseurl+"cactividades/leeActividades",
+		function(data){
+			var r = JSON.parse(data);
+			$.each(r, function(i,item){
+				$('#cmbActividad').append(
+						'<option value="'+item.idActividad+'">'+item.nombreActividad+'</option>'	
+					);
+		});
+});
+

@@ -17,6 +17,10 @@
 		<script src=" <?php echo base_url()?>js/jareaB.js"></script>
 		
 	<?php endif ?>
+
+	<?php if ($this->uri->segment(1)=='casignaciones'): ?>
+		<script src=" <?php echo base_url()?>js/jasignaciones.js"></script>
+	<?php endif ?>
 	<script type="text/javascript">
 		var baseurla = "<?php echo base_url();?>";
 	</script>
