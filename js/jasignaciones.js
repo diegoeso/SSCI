@@ -1,5 +1,6 @@
 $.post(baseurl+"cactividades/leeActividades",
 		function(data){
+			alert(data);
 			var r = JSON.parse(data);
 			$.each(r, function(i,item){
 				$('#cmbActi').append(
@@ -11,6 +12,7 @@ $.post(baseurl+"cactividades/leeActividades",
 
 $.post(baseurl+"cusuario/leerUsuarios",
 		function(data){
+			alert(data);
 			var u = JSON.parse(data);
 			$.each(u, function(i,item){
 				$('#cmbPresta').append(

@@ -22,7 +22,7 @@ class Mactividades extends CI_Model
 	}
 
 	public function leerActividades(){
-		$this->db->select('nombreActividad,descripcion,fechaRegistro,fechaInicio,fechaTermino,idArea');
+		$this->db->select('idActividad,nombreActividad,descripcion,fechaRegistro,fechaInicio,fechaTermino,idArea');
 		$this->db->from('actividades');
 		$re = $this->db->get();
 		return $re->result();

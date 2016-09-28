@@ -41,7 +41,7 @@ class Musuario extends CI_Model
 		}
 	}*/
 	public function leerUsuarios(){
-		$this->db->select('nombre,apellidoPaterno,apellidoMaterno,correo,telefono');
+		$this->db->select('idUsuario,nombre,apellidoPaterno,apellidoMaterno,correo,telefono');
 		$this->db->from('usuarios');
 		$re = $this->db->get();
 		return $re->result();
