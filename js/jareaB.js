@@ -9,8 +9,8 @@ $.post(baseurl+"careas/leeAreas",
 });
 
 $('#cboArea').change(function(){
-	$('#cboArea option:selected'),each(function(){
-		var id = $('#cboArea').value();
+	$('#cboArea option:selected').each(function(){
+		var id = $('#cboArea').val();
 		alert(id);
 	});
-});
+});

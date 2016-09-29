@@ -45,11 +45,10 @@
           <div class="col-xs-7">
             <div class="form-group">
               <label>
-                Nombre del area:
+                Nombre del área:
               </label> 
-              <input name="nombreArea" class="form-control">
+              <input name="nombreArea" class="form-control" placeholder="Nombre del área">
             </div>
-            <label id="error_nombre" class="errores_formulario">Error, escriba un nombre valido</label>
           </div>
           </div>
            <div class="row">
@@ -58,9 +57,8 @@
                 <label>
                 Descripción:
               </label> 
-              <textarea name="descripcion" class="form-control" rows="5"></textarea>
+              <textarea name="descripcion" class="form-control" rows="5" placeholder="Descripción"></textarea>
               </div>
-          <label id="error_descripcion" class="errores_formulario">Error, solo se aceptan numeros y letras</label>
             </div>
           </div>
           <div class="row">
@@ -69,11 +67,17 @@
               <label>
                 Responsable:
               </label> 
-              <input name="responsable" class="form-control">
+              <input name="responsable" class="form-control" placeholder="Responsable del área">
             </div>
-            <label id="error_nombre" class="errores_formulario">Error, escriba un nombre valido</label>
           </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+           
+      </div>
+      <div class="row">
+         <?php echo validation_errors(); ?>
+      </div>
+      <div align="right">
+          <input type="submit" value="Guardar" name="">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
       </div>
       <!--<?php //validation_errors();?>-->
     </form>
@@ -81,3 +85,6 @@
   </div>
   </div>
   </div>
+  <script type="text/javascript">
+    var baseurla = "<?php echo base_url();?>";
+</script>

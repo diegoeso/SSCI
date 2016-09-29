@@ -43,6 +43,7 @@ class Musuario extends CI_Model
 	public function leerUsuarios(){
 		$this->db->select('idUsuario,nombre,apellidoPaterno,apellidoMaterno,correo,telefono');
 		$this->db->from('usuarios');
+		$this->db->where('tipoUsuario', 1);
 		$re = $this->db->get();
 		return $re->result();
 	}

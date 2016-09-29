@@ -9,6 +9,7 @@ class Careas extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('mareas');
+		$this->load->library('form_validation');
 		
 	}
 	public function index()
@@ -24,10 +25,10 @@ class Careas extends CI_Controller
 		$param['responsable'] = $this->input->post('responsable');
 		
 		//validaciones
-		$this->form_validation->set_rules('nombreArea','Nombre Area','requiered');
+		/*$this->form_validation->set_rules('nombreArea','Nombre Area','requiered');
 		$this->form_validation->set_rules('descripcion','Descripcion','requiered');
 		$this->form_validation->set_rules('responsable','Responsable','requiered');
-		if ($this->form_validation->run()===TRUE) {
+		if ($this->form_validation->run()==TRUE) {*/
 			if ($this->mareas->guardar($param)==TRUE) 
 			{
 				echo "<script language='JavaScript'>alert('Registro existoso');</script>";
@@ -41,11 +42,11 @@ class Careas extends CI_Controller
 				$this->load->view('layout/vcabeceraA');
 				$this->load->view('administrador/vareas');
 				$this->load->view('layout/vpie');
-			}
+			}/*
 		}else
 		{
 			echo validation_errors('<li>','</li>');
-		}
+		}*/
 		
 		
 

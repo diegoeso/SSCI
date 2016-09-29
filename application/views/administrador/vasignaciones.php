@@ -18,7 +18,7 @@
 </div>     
 <div class="container">
   <div class="row container" >
-    <table class="table table-bordered" id="tablaDatos">
+    <table class="table table-bordered" id="tablaAsignacion">
       <thead>
         <tr>
           <td class="text-center">Prestador</td>
@@ -48,7 +48,7 @@
               <label>
                 Prestador:
               </label> 
-              <select name="cmbPrestador" id="cmbPresta" class="form-control"></select>
+              <select name="cmbPrestador" id="cmbPresta" class="form-control" type="submit"></select>
               <!--<input name="nombreArea" class="form-control">-->
             </div>
           </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php 
 /**
 * 
 */
@@ -32,6 +32,9 @@ class Casignaciones extends CI_Controller
 			echo "<script language='JavaScript'>alert('Registro exitoso');</script>";
 		}
 			
+	}
+	public function cargaAsignacion(){
+		echo json_encode($this->masignaciones->cargaAsignacion());
 	}
 }
  ?>
