@@ -38,7 +38,7 @@
 			<div class="modal-content">
 		        <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title">Area</h4>
+			        <h4 class="modal-title">Actividades</h4>
 		        </div>
 			    <div class="modal-body">
 			        <!--Formulario de registro-->
@@ -82,46 +82,50 @@
 		</div>
 	</div>
 </div>
+<!-- editar -->
 <div class="modal fade" tabindex="-1" role="dialog" id="editar">
 	<div class="modal-dialog" role="document">
 		<div>
 			<div class="modal-content">
 		        <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title">Editar Área</h4>
+			        <h4 class="modal-title">Editar Actividad</h4>
 		        </div>
 			    <div class="modal-body">
 			        <!--Formulario de registro-->
 			  
-			      	<form method="post" action="<?php echo base_url()?>cactividades/guardar">
+			      	<form method="post" action="<?php echo base_url()?>cactividades/editar">
 				    	<div class="col-xs-7">
+				    	<input type="text" class="hidden" id="id" name="id">
 				      		<div class="from-gruop" align="left">
 				      			<label>Nombre</label>
-				      			<input name="txtnombre" class="form-control"> 
+				      			<input name="txtnombresele" class="form-control" id="txtnombre"> 
 				      		</div>
 	      				</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Área</label>
-				      		<select class="form-control" name="cmbactividades" id="cboArea">
+				      		<select class="form-control" name="cmbactividadessele" id="cboArea">
 				      			
 				      		</select>
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Registro</label>
-				      		<input type="date" name="txtdateReg" class="form-control">
+				      		<input type="date" name="txtdateRegsele" id="txtdateReg" class="form-control">
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Inicio</label>
-				      		<input type="date" name="txtdateIni" class="form-control">
+				      		<input type="date" name="txtdateInisele" id="txtdateIni" class="form-control">
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Termino</label>
-				      		<input type="date" name="txtdateTer" class="form-control">
+				      		<input type="date" name="txtdateTersele" id="txtdateTer" class="form-control">
 				      	</div>
 				      	<div class="col-xs-12 form-group" align="left">
 				      		<label>Descripción</label>
-				      		<input type="text" name="txtdesc" class="form-control" >
+				      		<textarea name="txtdescripcionsele" id="txtdescripcion" cols="40" rows="5" class="form-control"></textarea>
+				      		<!--<input type="text" name="txtdesc" class="form-control" >-->
 				      	</div>
+		
 				      	<div align="right">
 				      		<input type="submit" value="Guardar" name="">
 	      					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
