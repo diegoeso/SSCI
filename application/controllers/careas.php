@@ -29,7 +29,7 @@ class Careas extends CI_Controller
 		if ($this->form_validation->run()==TRUE) {
 			if ($this->mareas->guardar($param)==TRUE) 
 			{
-				echo "<script language='JavaScript'>alert('Registro existoso');</script>";
+				echo "<script language='JavaScript'>alert('Registro existoso, chido');</script>";
 					
 				$this->load->view('layout/vcabeceraA');
 				$this->load->view('administrador/vareas');
