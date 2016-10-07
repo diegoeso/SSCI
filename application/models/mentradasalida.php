@@ -33,17 +33,18 @@ class Mentradasalida extends CI_Model
 	public function validarU()
 	{
 		$tu=$this->session->userdata('s_tipoUsuario');
-		if ($tu=='1') {
+		if ($tu==1) {
 			return 1;
 		}else{
 			return 0;
 		}
 	}
-	public function registro($tU)
+	public function registro($tU,$fecha)
 	{
-		$this->db->select('*');
+		$this->db->select('hora_entrada');
 		$this->db->from('registro');
 		$this->db->where('idUsuario',$tU);
+		$this->db->where('fecha',$fecha);
 		$re=$this->db->get();
 		if($re -> num_rows() > 0)
 	   	{
@@ -68,6 +69,21 @@ class Mentradasalida extends CI_Model
 		{
 			return 0;
 		}
-	}	
+	}
+
+	public function editar($param,$idU)
+	{
+		$campo=array('hora_salida'=>$param['hora_salida']
+			);
+		$this->db->where('idUsuario',$idU);
+		$this->db->update('registro',$campo);
+		// $reg=$this->db->insert('registro',$campo);
+		if ($this->db->affected_rows() > 0) {
+			return true;
+		}else
+		{
+			return false;
+		}
+	}		
 }
  ?>

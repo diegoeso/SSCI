@@ -1,4 +1,4 @@
-<?php 
+<?php 
 /**
 * 
 */
@@ -35,6 +35,19 @@ class Casignaciones extends CI_Controller
 	}
 	public function cargaAsignacion(){
 		echo json_encode($this->masignaciones->cargaAsignacion());
+	}
+
+	function mostrar(){
+		if ($this->input->is_ajax_request()) {
+			$buscar = $this->input->post("buscar");
+			$datos = $this->masignaciones->mostrar($buscar);
+			echo json_encode($datos);
+			
+		}
+		else
+		{
+			show_404();
+		}
 	}
 }
  ?>

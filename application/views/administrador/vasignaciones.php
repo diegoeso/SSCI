@@ -18,7 +18,7 @@
 </div>     
 <div class="container">
   <div class="row container" >
-    <table class="table table-bordered" id="tablaAsignacion">
+    <table class="table table-bordered" id="tablaDatos">
       <thead>
         <tr>
           <td class="text-center">Prestador</td>

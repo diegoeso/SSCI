@@ -6,14 +6,13 @@
 		         	<div class="col-xs-13" align="right">
 		         		<br>
 		         		<label>Nombre:</label>
-		         		<input type="text" name="nombre">          		         				         		
-		         		<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="" id="btnBuscar"><span class="glyphicon glyphicon-search"></span></a>
-		    	     	<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Agregar <span class="glyphicon glyphicon-plus"></span></a>		    	     	 
+		         		<input type="text" name="txtBuscarU" id="txtBuscarU">          		         			
+		    	     	<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Agregar <span class="glyphicon glyphicon-plus"></span></a>		    	    	 
 		    		</div>
 		    		<br>
 					<div class="cols-xs-13">
 						<div class="row" >
-							<table class="table table-bordered" id="tablaDatos">
+							<table class="table table-bordered" id="tablaDatosU">
 								<thead>
 									<tr>
 										<td class="text-center">Nombre</td>
@@ -24,7 +23,6 @@
 									</tr>
 								</thead>							
 								<tbody>	
-
 								</tbody>										
 							</table>					
 						</div>
@@ -88,12 +86,7 @@
 									<label>Contraseña:</label><br>
 									<input type="password" name="txtpassword" id="pass_usuario"><br>
 									<label>Area:</label><br>
-									<select id="combo_areas" name="careas">
-										<option value="1">Desarrollo de software</option>
-										<option value="2">Software</option>
-										<option value="3">Telecomunicaciones</option>
-										<option value="4">Redes</option>
-										<option value="5">Mixto</option>
+									<select id="cboArea" name="cboArea">										
 									</select>									
 								</div>
 							</div>
@@ -108,63 +101,83 @@
 	  	</div>
 	</div>
 
-
 	</div>
 	 </div>
 	<!-- FIN DEl NAV DE CONTENEDOR PRINPAL-->
-	<script charset ="utf-8">
-		function agregar_fila(){
-			var table;
-			var longi = document.getElementById("nombre_usuario").value.length;
-			var row;
-			var cel1;
-			var cel2;
-			var cel3;
-			var cel4;
-			var cel5;
-			var cont = 1;			
-			if(document.getElementById("nombre_usuario").value.length==0){
-				alert("Ingresa nombre");				
-			}else{
-				if(document.getElementById("apellido_paterno").value.length==0){
-					alert("Ingresa apellido paterno");								
-				}else{
-					if(document.getElementById("apellido_materno").value.length==0){
-						alert("Ingresa apellido materno");									
-					}else{
-						var table = document.getElementById("tablaDatos");
-							var filas = document.getElementById("tablaDatos").rows.length;							
-							//alert(cont);
-							row = table.insertRow(cont+1);
-							cel1 = row.insertCell(0);
-							cel2 = row.insertCell(1);
-							cel3 = row.insertCell(2);
-							cel4 = row.insertCell(3);
-							cel5 = row.insertCell(4);
-							cel1.innerHTML = document.getElementById("nombre_usuario").value+" "+document.getElementById("apellido_paterno").value+" "+document.getElementById("apellido_materno").value; 
-							cel2.innerHTML = document.getElementById("correo_usuario").value;
-							cel3.innerHTML = document.getElementById("telefono_usuario").value;
-							cel4.innerHTML  = document.getElementById("areas").value;
-							//cel5.innerHTML = utf+e031;
-							cont = cont + 1;		
-						/*if(document.getElementById("sexo_mujer").selected == false || document.getElementById("sexo_mujer").selected==false){
-							alert("Selecciona sexo")
-						}else{
-											
-						}*/
 
-					}
-				}
-			}
-		}
+	<!-- Editar -->
+<div class="modal fade" tabindex="1" role="dialog" id="editar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title">Editar usuario de servicio social</h4>
+	      		</div>
+	    		<div class="modal-body">
+	      		<!--Formulario de registro-->	
+					<form name ="usuarioE" id="datos_usuario" method="POST" action="<?php echo base_url()?>cusuario/editar"> 
+						<div class="row">
+							<div class="col-xs-6"x>
+								<div class="form-group" align="left">
+								<input type="text" class="hidden" id="id" name="id">
+									<label>Nombre:</label> 
+									<input type="text" class="form-control" id="txtnombresele" name="txtnombresele">
+									<label>Apellido paterno:</label> 
+									<input type="text" class="form-control" id="txtapsele" name="txtapsele">
+									<label>Apellido materno:</label> 
+									<input type="text" class="form-control" id="txtamsele" name="txtamsele">
+									<label>Sexo:</label>
+									Hombre <input type="radio" name="sexosele" value="H" id="sexoseleh" >
+									Mujer <input type="radio" name="sexosele" value="M" id="sexoselem"><br>
+									<label>Matricula:</label> 
+									<input type="text" class="form-control" id="txtmatriculasele" name="txtmatriculasele">
+									<label>Correo electrónico:</label> 
+									<input type="text" class="form-control" id="txtcorreosele" name="txtcorreosele">
+									<label>Institución de procedencia:</label>
+									<input type="text" name="txtinstitucionsele" class="form-control" id="txtinstitucionsele">
+									<label>Semestre:</label> 
+									<input type="number" class="form-control" id="txtsemestresele" name="txtsemestresele">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group" align="left">
+									<label>Teléfono:</label> 
+									<input type="tel" class="form-control" id="txttelefonosele" name="txttelefonosele">
+									<label>Fecha de alta:</label>
+									<input type="date"  class="form-control" id="txtaltasele" name="txtaltasele">
+									<label>Fecha de inicio:</label>
+									<input type="date"  class="form-control" id="txtiniciosele" name="txtiniciosele">
+									<label>fecha de término:</label>
+									<input type="date" class="form-control"  id="txtfinsele" name="txtfinsele">
+									<label>Tipo de usuario:</label><br>
+									<select name="ctipousuariosele" id="ctipousuariosele">										
+										<option value="1">Servicio social</option>
+										<option value="0">Administrador</option>
+									</select><br>
+									<label>Nombre de usuario:</label>
+									<input type="text" class="form-control" name="txtusersele" id="txtusersele">
+									<label>Contraseña:</label><br>
+									<input type="password" name="txtpasswordsele" id="txtpasswordsele"><br>
+									<label>Area:</label><br>
+									<select id="cboAreasele" name="cboAreasele">										
+									</select>									
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">	        	
+	        				<input type="submit" value="Guardar" name="">
+	      				</div>
+					</form>
+				</div>
+	      		
+	    	</div>
+	  	</div>
+	</div>
 
-		function validar_datos(){
-			var cont = 1;			
-			var row = table.insertRow(cont);
-			var cel5 = row.insertCell(4);
-			if (document.getElementById("nombre_usuario").value==null) {
-				cel5.innerHTML = "texto vacio";
+	</div>
+	 </div>
 
-			}
-		}
-	</script>	
+	
+	<script type="text/javascript">
+		var baseurl = "<?php echo base_url();?>";
+	</script>

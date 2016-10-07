@@ -25,13 +25,12 @@ function inicio()
 				nombreArea=item.nombreArea;
 			});
 			$('#id').val(id);
-			$('#txtnombre').val(nombre);
-			$("#cboArea").val(idArea);
-			
-			$("#txtdescripcion").val(descripcion);
-			$("#txtdateReg").val(fechaRegistro);
-			$("#txtdateIni").val(fechaInicio);
-			$("#txtdateTer").val(fechaTermino);
+			$('#txtnombresele').val(nombre);
+			$('#cboArea').val(idArea);
+			$("#txtdescripcionsele").val(descripcion);
+			$("#txtdateRegsele").val(fechaRegistro);
+			$("#txtdateInisele").val(fechaInicio);
+			$("#txtdateTersele").val(fechaTermino);
 
 		});
 	});

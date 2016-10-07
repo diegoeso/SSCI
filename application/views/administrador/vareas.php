@@ -19,14 +19,14 @@
 <div class="container">
   <div class="row container" >
     <table class="table table-bordered" id="tablaDatos">
-      <thead>
+      <!-- <thead>
         <tr>
           <td class="text-center">Nombre Area</td>
           <td class="text-center">Descripcion</td>
           <td class="text-center">Responsable</td>
           <td class="text-center">Opción</td>
         </tr>
-      </thead>              
+      </thead>   -->            
     </table>          
   </div>
  </div>

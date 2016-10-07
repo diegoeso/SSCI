@@ -32,5 +32,24 @@ class Masignaciones extends CI_Model
 		return $con->result();
 		/*SELECT a.idAsignacion,u.nombre,b.nombreActividad,a.status,a.fechaInicio,r.nombreArea FROM asignacion a, usuarios u, actividades b,area r where a.idUsuario=u.idUsuario and a.idActividad=b.idActividad group by a.idAsignacion;*/
 	}
+
+	// public function mostrar($valor){
+	// 	$this->db->select('u.nombre,b.nombreActividad,a.status,a.fechaInicio');
+	// 	$this->db->like("idAsignacion",$valor);
+	// 	$this->db->from('asignacion a');
+	// 	$this->db->join('usuarios u','a.idUsuario=u.idUsuario');
+	// 	$this->db->join('actividades b','a.idActividad=b.idActividad');
+	// 	$consulta = $this->db->get();
+	// 	return $consulta->result();
+	// }	
+	public function mostrar($valor){
+		$this->db->select('*');
+		$this->db->like("idAsignacion",$valor);
+		// $this->db->from('asignacion a');
+		// $this->db->join('usuarios u','a.idUsuario=u.idUsuario');
+		// $this->db->join('actividades b','a.idActividad=b.idActividad');
+		$consulta = $this->db->get("asignacion");
+		return $consulta->result();
+	}	
 }
 ?>

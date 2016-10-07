@@ -52,7 +52,7 @@
 	      				</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Área</label>
-				      		<select class="form-control" name="cmbactividades" id="cboArea">
+				      		<select class="form-control" name="cmbactividades" id="cboAreasele">
 				      			
 				      		</select>
 				      	</div>
@@ -99,7 +99,7 @@
 				    	<input type="text" class="hidden" id="id" name="id">
 				      		<div class="from-gruop" align="left">
 				      			<label>Nombre</label>
-				      			<input name="txtnombresele" class="form-control" id="txtnombre"> 
+				      			<input name="txtnombresele" class="form-control" id="txtnombresele"> 
 				      		</div>
 	      				</div>
 				      	<div class="col-xs-4 form-group" align="left">
@@ -110,19 +110,19 @@
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Registro</label>
-				      		<input type="date" name="txtdateRegsele" id="txtdateReg" class="form-control">
+				      		<input type="date" name="txtdateRegsele" id="txtdateRegsele" class="form-control">
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Inicio</label>
-				      		<input type="date" name="txtdateInisele" id="txtdateIni" class="form-control">
+				      		<input type="date" name="txtdateInisele" id="txtdateInisele" class="form-control">
 				      	</div>
 				      	<div class="col-xs-4 form-group" align="left">
 				      		<label>Fecha de Termino</label>
-				      		<input type="date" name="txtdateTersele" id="txtdateTer" class="form-control">
+				      		<input type="date" name="txtdateTersele" id="txtdateTersele" class="form-control">
 				      	</div>
 				      	<div class="col-xs-12 form-group" align="left">
 				      		<label>Descripción</label>
-				      		<textarea name="txtdescripcionsele" id="txtdescripcion" cols="40" rows="5" class="form-control"></textarea>
+				      		<textarea name="txtdescripcionsele" id="txtdescripcionsele" cols="40" rows="5" class="form-control"></textarea>
 				      		<!--<input type="text" name="txtdesc" class="form-control" >-->
 				      	</div>
 		
