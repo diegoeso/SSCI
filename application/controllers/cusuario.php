@@ -35,7 +35,7 @@ class Cusuario extends CI_Controller
 		$param['idArea'] = $this->input->post('cboArea');
 		$res2=$this->musuario->guardar($param);
 		if($res2==1){
-			echo "<script language='JavaScript'>alert('Registro de usuario, existoso');</script>";
+			echo "<script language='JavaScript'>alert('Registro de usuario, fue existoso');</script>";
 			$this->load->view('layout/vcabeceraA');
 			$this->load->view('administrador/vusuario');
 			$this->load->view('layout/vpie');
