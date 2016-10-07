@@ -31,9 +31,7 @@ class Centradasalida extends CI_Controller
 		$pass=$this->input->post('txtpass');
 		$res=$this->mentradasalida->login($usu,$pass);
 		$val=$this->mentradasalida->validarU();
-		// echo "<script language='JavaScript'>alert('$val');</script>";
-		// $val=$this->session->userdata('s_tipoUsuario');
-		echo "<script language='JavaScript'>alert('$val');</script>";
+		echo "<script language='JavaScript'>alert('$val $res');</script>";
 		date_default_timezone_set("America/Mexico_City");
 			        $fecha = date('Y-m-d');
 			        $hora= date("h:i");
@@ -46,23 +44,24 @@ class Centradasalida extends CI_Controller
 				$this->load->view('layout/vpie');
 				$tU=$this->session->userdata('s_tipoUsuario');
 				$idU=$this->session->userdata('s_idUsuario');
-				$reg=$this->mentradasalida->registro($tU,$fecha);
+				$reg=$this->mentradasalida->registro($idU,$fecha);
 				if ($reg==1) {
-					echo "<script language='JavaScript'>alert('tiene datos');</script>";
-					$param['idU']=$idUsuario2;
-					$param['fecha']=$fecha;
-					$param['hora_entrada']=$hora;
-					$rES=$this->mentradasalida->insertaR($param);
-					if ($rES==1) {
-						echo "<script language='JavaScript'>alert('Hora entrada');</script>";
-					}
-				}else{
 					echo "<script language='JavaScript'>alert('no tiene datos');</script>";
 					$param['hora_salida']=$hora;
 					$rES=$this->mentradasalida->editar($param,$idU);
 					if ($rES==true) {
 						echo "<script language='JavaScript'>alert('Hora Salida');</script>";
 					}
+				}else{
+					echo "<script language='JavaScript'>alert('tiene datos');</script>";
+					$param['idU']=$idU;
+					$param['fecha']=$fecha;
+					$param['hora_entrada']=$hora;
+					$rES=$this->mentradasalida->insertaR($param);
+					if ($rES==1) {
+						echo "<script language='JavaScript'>alert('Hora entrada');</script>";
+					}
+					
 				}
 
 

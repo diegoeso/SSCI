@@ -39,13 +39,14 @@ class Mentradasalida extends CI_Model
 			return 0;
 		}
 	}
-	public function registro($tU,$fecha)
+	public function registro($idU,$fecha)
 	{
-		$this->db->select('hora_entrada');
+		$this->db->select('hora_entrada,fecha');
 		$this->db->from('registro');
-		$this->db->where('idUsuario',$tU);
+		$this->db->where('idUsuario',$idU);
 		$this->db->where('fecha',$fecha);
 		$re=$this->db->get();
+		// `si es mayor a cero es por que si tiene registro si es menos a cero no tiene nada de datos
 		if($re -> num_rows() > 0)
 	   	{
 	   		return $re->result();
