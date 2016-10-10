@@ -13,11 +13,45 @@ class Cusuario extends CI_Controller
 		$this->load->view('layout/vcabeceraA');
 		$this->load->view('administrador/vusuario');
 		$this->load->view('layout/vpie');
-		//$data['usuarios'] = $this->model('musuario')->leerUsuarios();
-		//$this->load->view('layout/vpie');
+		$this->load->library('form_validation');		
 	}
-	public function guardar(){
-		$param['nombre'] = $this->input->post('txtnombre');
+
+	public function validar(){
+		//echo "<script language='JavaScript'>alert('Entra a metodo validacion sin if');</script>";
+		
+			echo "<script language='JavaScript'>alert('Entra a metodo validacion');</script>";
+			$this->form_validation->set_rules('txtnombre','nombre','required|alpha');		
+			// $this->form_validation->set_rules('txtap','nombre','required|alpha');		
+			// $this->form_validation->set_rules('txtam','nombre','required|alpha');		
+			// $this->form_validation->set_rules('sexo','nombre','required');		
+			// $this->form_validation->set_rules('txtmatricula','nombre','required');		
+			// $this->form_validation->set_rules('txtcorreo','nombre','required|valid_email');		
+			// $this->form_validation->set_rules('txtinstitucion','nombre','required|alpha');		
+			// $this->form_validation->set_rules('txtsemestre','nombre','required|numeric');		
+			// $this->form_validation->set_rules('txttelefono','nombre','required|numeric|exact_length[10]');		
+			// $this->form_validation->set_rules('txtalta','nombre','required|numeric');		
+			// $this->form_validation->set_rules('txtinicio','nombre','required|numeric');		
+			// $this->form_validation->set_rules('txtfin','nombre','required|numeric');		
+			// $this->form_validation->set_rules('txtuser','nombre','required|numeric');		
+			// $this->form_validation->set_rules('txtpassword','nombre','required|numeric');	
+
+			$this->form_validation->set_message('txtnombre','Debe ingresar un nombre');
+			//$this->form_validation->set_message('valid_email','%s debe ser un correo valido');		
+
+			if($this->form_validation->run() == TRUE){
+				echo "<script language='JavaScript'>alert('Validacion correcta');</script>";
+				//guardar();
+			}else{			
+				 echo "<script language='JavaScript'>alert('Validacion incorrecta');</script>";
+				 $this->load->view('layout/vcabeceraA');
+				 $this->load->view('administrador/vusuario');
+				 $this->load->view('layout/vpie');
+			}
+				
+	}
+
+	public function guardar(){	
+		$param['nombre'] = $this->input->post('txtnombre');				
 		$param['apellidoPaterno'] = $this->input->post('txtap');
 		$param['apellidoMaterno'] = $this->input->post('txtam');
 		$param['sexo'] = $this->input->post('sexo');
@@ -33,13 +67,14 @@ class Cusuario extends CI_Controller
 		$param['user'] = $this->input->post('txtuser');
 		$param['password'] = $this->input->post('txtpassword');
 		$param['idArea'] = $this->input->post('cboArea');
+
 		$res2=$this->musuario->guardar($param);
-		if($res2==1){
-			echo "<script language='JavaScript'>alert('Registro de usuario, fue existoso');</script>";
-			$this->load->view('layout/vcabeceraA');
-			$this->load->view('administrador/vusuario');
-			$this->load->view('layout/vpie');
-		}
+			if($res2==1){
+				echo "<script language='JavaScript'>alert('Registro de usuario, fue existoso');</script>";
+				$this->load->view('layout/vcabeceraA');
+				$this->load->view('administrador/vusuario');
+				$this->load->view('layout/vpie');
+			}
 	}
 	function mostrarUsuario(){
 		if ($this->input->is_ajax_request()) {
@@ -83,8 +118,8 @@ class Cusuario extends CI_Controller
 	}
 
 	function editar(){
-		$idsele = $this->input->post("id");
-		$param['nombre'] = $this->input->post('txtnombresele');
+		$idsele = $this->input->post("id");		
+		$param['nombre'] = $this->input->post('txtnombresele');		
 		$param['apellidoPaterno'] = $this->input->post('txtapsele');
 		$param['apellidoMaterno'] = $this->input->post('txtamsele');
 		$param['sexo'] = $this->input->post('sexosele');
@@ -99,7 +134,7 @@ class Cusuario extends CI_Controller
 		$param['tipoUsuario'] = $this->input->post('ctipousuariosele');		
 		$param['user'] = $this->input->post('txtusersele');
 		$param['password'] = $this->input->post('txtpasswordsele');
-		$param['idArea'] = $this->input->post('cboAreasele');				
+		$param['idArea'] = $this->input->post('cboAreasele');		
 		$res=$this->musuario->editar($idsele,$param);		
 		if ($res == TRUE){
 			echo "<script language='JavaScript'>alert('Registro existoso');</script>";

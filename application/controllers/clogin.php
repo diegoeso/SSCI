@@ -44,12 +44,12 @@ class Clogin extends CI_Controller
 				$this->load->view('layout/vcabeceraA');
 				$this->load->view('administrador/vadmin');
 				$this->load->view('layout/vpie');
-				echo "<script language='JavaScript'>alert('administrador');</script>"; 
+				//echo "<script language='JavaScript'>alert('administrador');</script>"; 
 			}else
 			{
 				$this->load->view('layout/vcabeceraP');
 				$this->load->view('layout/vpie');
-				echo "<script language='JavaScript'>alert('prestador');</script>"; 
+				//echo "<script language='JavaScript'>alert('prestador');</script>"; 
 			}
 				
 		}else

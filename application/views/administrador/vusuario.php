@@ -43,7 +43,7 @@
 	      		</div>
 	    		<div class="modal-body">
 	      		<!--Formulario de registro-->	
-					<form name ="usuario" id="datos_usuario" method="POST" action="<?php echo base_url()?>cusuario/guardar"> 
+					<form name ="usuario" id="datos_usuario" method="POST" action="<?php echo base_url()?>cusuario/validar"> 
 						<div class="row">
 							<div class="col-xs-6"x>
 								<div class="form-group" align="left">
@@ -69,7 +69,7 @@
 							<div class="col-xs-6">
 								<div class="form-group" align="left">
 									<label>Teléfono:</label> 
-									<input type="tel" class="form-control" id="telefono_usuario" name="txttelefono">
+									<input type="number" class="form-control" id="telefono_usuario" name="txttelefono">
 									<label>Fecha de alta:</label>
 									<input type="date"  class="form-control" id="fecha_alta" name="txtalta">
 									<label>Fecha de inicio:</label>

@@ -1,9 +1,14 @@
+	
+$('#myModal').modal({ backdrop: 'static', keyboard: false })
 $(document).on("ready", inicioUsuarios)
 function inicioUsuarios(){
 	mostrarDatosU("");
 	$("#txtBuscarU").keyup(function(){
 		buscarU =$ ("#txtBuscarU").val();	
 		mostrarDatosU(buscarU);
+	});
+	$("form").submit(function(event){
+		//event.preventDefault();
 	});
 
 	$("body").on("click", "#tablaDatosU button", function(event){
