@@ -1,25 +1,20 @@
-<div class="container">
-  <div class="container" align="center">
-    <div class="col-xs-13" align="center">
-
-  <div class="container text-left" >
-     <div>
-     <div class="container">
-     <h1>Mensajes</h1>
-         <div class="cols-xs-12 col-sm-4">
-          <form class="form-inline">
-            <div class="form-group">
-              <label for="buscar">Buscar</label>
-              <input  value="<?php echo $this->session->userdata('s_idUsuario');?>" type="text" name="buscar" id="buscar" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-          </form>
+<div class="row">
+  <div class="container text-center">
+    <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <h3 align="left">Mensajes</h3>
         </div>
-        <div class="cols-xs-12 col-sm-2">
-          <a class="btn btn-default form-control" href="#" role="button" data-toggle="modal" data-target="#myModal"> Nuevo mensaje <span class="glyphicon glyphicon-plus"></span></a>
+        <div class="col-xs-12 col-md-8" align="right">
+          <br>
+          <label>Nombre: </label>
+          <input type="text" name="txtBuscar" id="txtBuscar">
+           <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="" id="btnBuscarA"><span class="glyphicon glyphicon-search"></span></a>
+          <a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Nuevo <span class="glyphicon glyphicon-plus"></span></a>
         </div>
-    </div>     
     </div>
+    <br>
+    
+  </div>
      </div>
 <section class="container">
     <div class="row">

@@ -116,6 +116,10 @@ class Cusuario extends CI_Controller
 
 	}
 
+	public function leeUsuario(){
+		echo json_encode($this->musuario->leeUsuario());
+	}
+
 }
 
 ?>

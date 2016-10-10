@@ -33,6 +33,12 @@
 	<script type="text/javascript">
 		var baseurl = "<?php echo base_url();?>";
 	</script>
+	<?php if ($this->uri->segment(1)=='cmensajesp'): ?>
+		<script src=" <?php echo base_url()?>js/jmensajesp.js"></script>
+	<?php endif ?>
+	<?php if ($this->uri->segment(1)=='cmensajes'): ?>
+		<script src=" <?php echo base_url()?>js/jmensajes.js"></script>
+	<?php endif ?>
 
 </body>
 </html>

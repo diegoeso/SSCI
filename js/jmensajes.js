@@ -1,4 +1,4 @@
-$.post(baseurl+"cusuario/leerUsuarios",
+$.post(baseurl+"cusuario/leeUsuario",
 		function(data){
 			alert(data);
 			var u = JSON.parse(data);
