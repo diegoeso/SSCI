@@ -53,7 +53,7 @@
       </ul>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="respuestas.php">Mensaje</a></li>
+        <li><a href="<?php echo base_url()?>cmensajes">Mensaje</a></li>
         <li><a href="<?php echo base_url()?>clogin">Salir</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

@@ -45,7 +45,7 @@
         <li><a href="">Reportes</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="">Mensajes</a></li>
+        <li><a href="<?php echo base_url();?>cmensajesp">Mensajes</a></li>
         <li><a href="<?php echo base_url();?>clogin">Salir</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
