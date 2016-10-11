@@ -1,5 +1,5 @@
 	
-$('#myModal').modal({ backdrop: 'static', keyboard: false })
+//$('#myModal').modal({ backdrop: 'static', keyboard: false })
 $(document).on("ready", inicioUsuarios)
 function inicioUsuarios(){
 	mostrarDatosU("");

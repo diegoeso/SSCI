@@ -10,7 +10,7 @@
 		    	     	<a class="btn btn-default" href="#" role="button" data-toggle="modal" data-target="#myModal"> Agregar <span class="glyphicon glyphicon-plus"></span></a>		    	    	 
 		    		</div>
 		    		<br>
-					<div class="cols-xs-13">
+					<div class="cols-xs-13">					
 						<div class="row" >
 							<table class="table table-bordered" id="tablaDatosU">
 								<thead>
@@ -38,17 +38,18 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 	      		<div class="modal-header">
+	        		<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
 	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        		<h4 class="modal-title">Nuevo usuario de servicio social</h4>
 	      		</div>
 	    		<div class="modal-body">
 	      		<!--Formulario de registro-->	
-					<form name ="usuario" id="datos_usuario" method="POST" action="<?php echo base_url()?>cusuario/validar"> 
+					<form name ="usuario" id="datos_usuario" method="POST" action="<?php echo base_url()?>cusuario/validar"> 					
 						<div class="row">
 							<div class="col-xs-6"x>
 								<div class="form-group" align="left">
-									<label>Nombre:</label> 
-									<input type="text" class="form-control" id="nombre_usuario" name="txtnombre">
+									<label>Nombre:</label> 									 
+									<input type="text" class="form-control" id="nombre_usuario" name="txtnombre" >
 									<label>Apellido paterno:</label> 
 									<input type="text" class="form-control" id="apellido_paterno" name="txtap">
 									<label>Apellido materno:</label> 
@@ -91,6 +92,7 @@
 								</div>
 							</div>
 						</div>
+						<?php if (validation_errors()): ?><div><label class="label-warning "><?php echo validation_errors(); ?></label></div><?php endif; ?> 
 						<div class="modal-footer">	        	
 	        				<input type="submit" value="Guardar" name="">
 	      				</div>

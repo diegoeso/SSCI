@@ -16,36 +16,39 @@ class Cusuario extends CI_Controller
 		$this->load->library('form_validation');		
 	}
 
-	public function validar(){
-		//echo "<script language='JavaScript'>alert('Entra a metodo validacion sin if');</script>";
-		
-			echo "<script language='JavaScript'>alert('Entra a metodo validacion');</script>";
+	public function validar(){		
+			//echo "<script language='JavaScript'>alert('Entra a metodo validacion');</script>";
 			$this->form_validation->set_rules('txtnombre','nombre','required|alpha');		
-			// $this->form_validation->set_rules('txtap','nombre','required|alpha');		
-			// $this->form_validation->set_rules('txtam','nombre','required|alpha');		
-			// $this->form_validation->set_rules('sexo','nombre','required');		
-			// $this->form_validation->set_rules('txtmatricula','nombre','required');		
-			// $this->form_validation->set_rules('txtcorreo','nombre','required|valid_email');		
-			// $this->form_validation->set_rules('txtinstitucion','nombre','required|alpha');		
-			// $this->form_validation->set_rules('txtsemestre','nombre','required|numeric');		
-			// $this->form_validation->set_rules('txttelefono','nombre','required|numeric|exact_length[10]');		
-			// $this->form_validation->set_rules('txtalta','nombre','required|numeric');		
-			// $this->form_validation->set_rules('txtinicio','nombre','required|numeric');		
-			// $this->form_validation->set_rules('txtfin','nombre','required|numeric');		
-			// $this->form_validation->set_rules('txtuser','nombre','required|numeric');		
-			// $this->form_validation->set_rules('txtpassword','nombre','required|numeric');	
+			 $this->form_validation->set_rules('txtap','apellido paterno','required|alpha');		
+			$this->form_validation->set_rules('txtam','apellido materno','required|alpha');		
+			$this->form_validation->set_rules('sexo','sexo','required');		
+			$this->form_validation->set_rules('txtmatricula','matricula','required');		
+			$this->form_validation->set_rules('txtcorreo','email','required|valid_email');		
+			$this->form_validation->set_rules('txtinstitucion','institucion','required|alpha');		
+			$this->form_validation->set_rules('txtsemestre','semestre','required|numeric');		
+			$this->form_validation->set_rules('txttelefono','telefono','required|numeric|exact_length[10]');		
+			$this->form_validation->set_rules('txtalta','fecha de alta','required|numeric');		
+			$this->form_validation->set_rules('txtinicio','fecha de inicio','required|numeric');		
+			$this->form_validation->set_rules('txtfin','fecha de termino','required|numeric');		
+			$this->form_validation->set_rules('txtuser','user','required|numeric');		
+			$this->form_validation->set_rules('txtpassword','password','required|numeric');	
 
-			$this->form_validation->set_message('txtnombre','Debe ingresar un nombre');
+			//$this->form_validation->set_message('txtnombre','Debe ingresar un nombre');
 			//$this->form_validation->set_message('valid_email','%s debe ser un correo valido');		
+			//$text_error = (String) $this->form_validation->set_message('required','%s ya no es obligatorio');		
 
 			if($this->form_validation->run() == TRUE){
 				echo "<script language='JavaScript'>alert('Validacion correcta');</script>";
 				//guardar();
+				$this->load->view('layout/vcabeceraA');
+				$this->load->view('administrador/vusuario');
+				$this->load->view('layout/vpie');
 			}else{			
-				 echo "<script language='JavaScript'>alert('Validacion incorrecta');</script>";
+				 echo "<script language='JavaScript'>alert('Validacion incorrecta ');</script>";
 				 $this->load->view('layout/vcabeceraA');
 				 $this->load->view('administrador/vusuario');
 				 $this->load->view('layout/vpie');
+
 			}
 				
 	}
